@@ -73,10 +73,29 @@ const menu = [
   },
 ];
 
+//navbar
+const navToggle = document.querySelector('.nav-toggle');
+const links = document.querySelector('.links');
+//menu
 const sectionCenter = document.querySelector('.section-center');
 const container = document.querySelector('.btn-container');
 
-//Event listeners
+//event listeners
+navToggle.addEventListener('click', () => {
+  console.log(links.classList);
+
+  // using if - else
+  // if(links.classList.contains('show-links')){
+  //     links.classList.remove('show-links')
+  // } else {
+  //     links.classList.add('show-links');
+  // }
+
+  // using toggle
+  links.classList.toggle('show-links')
+})
+
+//Event listeners-menu
 //load Items
 window.addEventListener('DOMContentLoaded', () => {
   displayMenuItems(menu);
