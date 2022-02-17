@@ -76,9 +76,6 @@ const menu = [
 //navbar
 const navToggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.links');
-//menu
-const sectionCenter = document.querySelector('.section-center');
-const container = document.querySelector('.btn-container');
 
 //event listeners
 navToggle.addEventListener('click', () => {
@@ -95,7 +92,12 @@ navToggle.addEventListener('click', () => {
   links.classList.toggle('show-links')
 })
 
-//Event listeners-menu
+
+//menu
+const sectionCenter = document.querySelector('.section-center');
+const container = document.querySelector('.btn-container');
+
+//Event listeners
 //load Items
 window.addEventListener('DOMContentLoaded', () => {
   displayMenuItems(menu);
@@ -155,3 +157,23 @@ const displayMenuItems = (menuItems) => {
   displayMenu = displayMenu.join("");
   sectionCenter.innerHTML= displayMenu;
 }
+
+
+//using selectors inside the element - questions
+
+const questions = document.querySelectorAll('.question');
+
+questions.forEach((question) => {
+    const btn = question.querySelector('.question-btn');
+    btn.addEventListener('click', (e) => {
+        //to close other questions while accessing one particular question
+        questions.forEach((item) => {
+            if(item !== question) {
+                item.classList.remove('show-text')
+            }
+        })
+
+        //toggling the show-hide functionality
+        question.classList.toggle('show-text')
+    })
+})
