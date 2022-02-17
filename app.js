@@ -97,7 +97,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//Filter Items
+//Filter Items function
 const displayMenuBtns = (filterBtns) => {
   filterBtns.forEach((btn) => btn.addEventListener('click', (e) => {
     const category = e.currentTarget.dataset.id;
