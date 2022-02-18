@@ -172,6 +172,27 @@ main {
   display: grid;
   place-items: center;
 }
+
+/* jumbotron */
+.jumbotron {
+  padding: 70px 30px;
+  margin: 0px auto;
+  background:linear-gradient(rgba(61, 56, 56, 0.5), rgba(255,255,255,.5)), url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1153&q=80') 50% no-repeat ;
+  background-size: cover;
+  /* background-color: #94618E; */
+  color: floralwhite;
+} 
+
+.jumbotron .container {
+  max-width: 100%;
+  
+}
+.jumbotron .container p {
+  max-width: 70%;
+  color: floralwhite;
+}
+
+
 /*
 =============== 
 Menu
@@ -214,7 +235,7 @@ Menu
   background: var(--clr-gold);
   color: var(--clr-white);
 }
-.section-center {
+.section-center-menu {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
@@ -239,7 +260,7 @@ Navbar
 ===============
 */
 nav {
-  background: var(--clr-white);
+  background: #495371;
   box-shadow: var(--light-shadow);
 }
 .nav-header {
@@ -250,7 +271,7 @@ nav {
 }
 .nav-toggle {
   font-size: 1.5rem;
-  color: var(--clr-primary-5);
+  color: #F1E0AC;
   background: transparent;
   border-color: transparent;
   transition: var(--transition);
@@ -264,7 +285,7 @@ nav {
   height: 40px;
 }
 .links a {
-  color: var(--clr-grey-3);
+  color: #F1E0AC;
   font-size: 1rem;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
@@ -279,6 +300,7 @@ nav {
 }
 .social-icons {
   display: none;
+  
 }
 .links {
   height: 0;
@@ -288,6 +310,98 @@ nav {
 .show-links {
   height: 10rem;
 }
+
+/*
+=============== 
+About
+===============
+*/
+.section-center-about {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+/* .title-about {
+  text-align: center;
+  margin-bottom: 4rem;
+} */
+.title p {
+  width: 70%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.about-img {
+  margin-bottom: 2rem;
+}
+.about-img img {
+  border-radius: var(--radius);
+  object-fit: cover;
+  height: 20rem;
+}
+@media screen and (min-width: 992px) {
+  .about-img {
+    margin-bottom: 0;
+    
+  }
+
+  .about-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+.about {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.btn-container-about {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.tab-btn:nth-child(1) {
+  border-top-left-radius: var(--radius);
+}
+.tab-btn:nth-child(3) {
+  border-top-right-radius: var(--radius);
+}
+.tab-btn {
+  padding: 1rem 0;
+  border: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  display: block;
+  background: var(--clr-grey-9);
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: var(--spacing);
+}
+.tab-btn:hover:not(.active) {
+  background: var(--clr-primary-10);
+  color: var(--clr-primary-5);
+}
+.about-content {
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  padding: 2rem 1.5rem;
+}
+/* hide content */
+.content {
+  display: none;
+}
+.tab-btn.active {
+  background: var(--clr-white);
+}
+.content.active {
+  display: block;
+}
+
+
 
 /* 
 ===============
@@ -369,7 +483,7 @@ Menu
   }
 }
 @media screen and (min-width: 1200px) {
-  .section-center {
+  .section-center-menu {
     width: 95vw;
     grid-template-columns: 1fr 1fr;
   }
@@ -384,10 +498,10 @@ Menu
 Questions
 ===============
 */
-.title {
+/* .title {
   margin-top: 15vh;
   margin-bottom: 4rem;
-}
+} */
 .title h2 {
   color: var(--clr-gold);
   font-family: "Great Vibes", cursive;
@@ -449,3 +563,36 @@ Questions
 .show-text .plus-icon {
   display: none;
 }
+
+
+.footer {
+  background-color: #98B4AA;
+  margin-bottom: 0;
+}
+
+.footer-container {
+  max-width: 100%;
+}
+.footer-container p {
+  color: rgb(235, 229, 229);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.about-footer {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: space-evenly;
+  
+}
+
+.about-footer a {
+  text-decoration: none;
+  color: rgb(235, 229, 229);
+}
+/* .about-footer p {
+  text-decoration: none;
+  color: rgb(235, 229, 229);
+  text-align: center;
+} */

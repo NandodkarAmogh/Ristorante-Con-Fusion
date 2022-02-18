@@ -35,7 +35,7 @@ const menu = [
     id: 5,
     title: "egg attack",
     category: "lunch",
-    price: 22.99,
+    price: 60,
     img: "./images/item-5.jpeg",
     desc: `Minced flavoured Vegetable deep fried and dressed with mayo, egg and Lettuce. `,
   },
@@ -43,7 +43,7 @@ const menu = [
     id: 6,
     title: "oreo dream",
     category: "shakes",
-    price: 18.99,
+    price: 180,
     img: "./images/item-6.jpeg",
     desc: `Oreo milkshake is an easy milkshake made with vanilla ice cream, milk, and Oreo biscuits and chocolate sauce`,
   },
@@ -51,23 +51,15 @@ const menu = [
     id: 7,
     title: "bacon overflow",
     category: "breakfast",
-    price: 8.99,
+    price: 250,
     img: "./images/item-7.jpeg",
     desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
   },
   {
     id: 8,
-    title: "american classic",
-    category: "lunch",
-    price: 12.99,
-    img: "./images/item-8.jpeg",
-    desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
-  },
-  {
-    id: 9,
     title: "quarantine buddy",
     category: "shakes",
-    price: 16.99,
+    price: 100,
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
@@ -92,9 +84,30 @@ navToggle.addEventListener('click', () => {
   links.classList.toggle('show-links')
 })
 
+// about section
+
+const about = document.querySelector(".about");
+const btns = document.querySelectorAll(".tab-btn");
+const articles = document.querySelectorAll(".content");
+about.addEventListener("click", function (e) {
+  const id = e.target.dataset.id;
+  if (id) {
+    // remove selected from other buttons
+    btns.forEach(function (btn) {
+      btn.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    // hide other articles
+    articles.forEach(function (article) {
+      article.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
+  }
+});
 
 //menu
-const sectionCenter = document.querySelector('.section-center');
+const sectionCenter = document.querySelector('.section-center-menu');
 const container = document.querySelector('.btn-container');
 
 //Event listeners
