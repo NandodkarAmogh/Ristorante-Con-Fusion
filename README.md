@@ -16,20 +16,13 @@
 
 ### Screenshot
 
-![](./images/Animation.gif)
-![](./images/img1_desktop.png)
-![](./images/img1_mobile.png)
-![](./images/img2_desktop.png)
-![](./images/img2_mobile.png)
-![](./images/img3_desktop.png)
-![](./images/img3_mobile.png)
-![](./images/img4_desktop.png)
-![](./images/img4_mobile.png)
+![](./images/desktop1.png)
+![](./images/mobile1.png)
 
 ### Links
 
-- Solution URL: [https://github.com/NandodkarAmogh/Vanilla-JavaScript-Todo-App](https://github.com/NandodkarAmogh/Vanilla-JavaScript-Todo-App)
-- Live Site URL: [https://vanilla-javascript-todo-list.netlify.app/](https://vanilla-javascript-todo-list.netlify.app/)
+- Solution URL: [https://github.com/NandodkarAmogh/Ristorante-Con-Fusion](https://github.com/NandodkarAmogh/Ristorante-Con-Fusion)
+- Live Site URL: [https://ristorante-con-fusion-javascript.netlify.app/](https://ristorante-con-fusion-javascript.netlify.app/)
 
 ## My process
 
